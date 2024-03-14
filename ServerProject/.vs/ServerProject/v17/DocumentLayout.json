@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|y:\\groups\\group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\serverproject\\serverproject\\edentities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|solutionrelative:serverproject\\edentities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|y:\\groups\\group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\serverproject\\serverproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|solutionrelative:serverproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|y:\\groups\\group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\serverproject\\serverproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|solutionrelative:serverproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|y:\\groups\\group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\serverproject\\serverproject\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|solutionrelative:serverproject\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|y:\\groups\\group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\serverproject\\serverproject\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E368CC37-9C43-4294-B574-E7CAA151F78E}|ServerProject\\ServerProject.csproj|solutionrelative:serverproject\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Category.cs",
+              "DocumentMoniker": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Edentities\\Category.cs",
+              "RelativeDocumentMoniker": "ServerProject\\Edentities\\Category.cs",
+              "ToolTip": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Edentities\\Category.cs",
+              "RelativeToolTip": "ServerProject\\Edentities\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T18:54:20.805Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "ServerProject\\Controllers\\RecipeController.cs",
+              "ToolTip": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "ServerProject\\Controllers\\RecipeController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAADwvw4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T19:42:39.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Program.cs",
+              "RelativeDocumentMoniker": "ServerProject\\Program.cs",
+              "ToolTip": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Program.cs",
+              "RelativeToolTip": "ServerProject\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T19:23:49.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "ServerProject\\Controllers\\CategoryController.cs",
+              "ToolTip": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "ServerProject\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAA9wC4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T19:17:14.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ServerProject\\Controllers\\UserController.cs",
+              "ToolTip": "Y:\\Groups\\Group_3\\\u05E0\u05D9\u05D6\u05E8\u05D9  \u05EA\u05D0\u05D9\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D9\u05EA\\Angular\\\u05D4\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05E9\u05DC\u05D9\\ServerProject\\ServerProject\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ServerProject\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T19:16:57.606Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

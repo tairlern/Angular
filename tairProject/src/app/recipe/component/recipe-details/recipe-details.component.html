@@ -1,0 +1,59 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <div class="row">
+
+
+    <!-- <div id="myModal" class="modal fade in"> -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="btn cencel" data-dismiss="modal" (click)="cencel()"> <mat-icon>cancel</mat-icon> </button>
+        <div class="modal-header">
+          <h4 class="modal-title">{{recipe?.nameRecipe}}</h4>
+        </div>
+
+        <div class="card-text">
+           <img class="card-img-top" src={{recipe?.urlImage}}>
+          <figure class="profile profile-inline">
+            <img src={{category?.urlImage}} class="profile-avatar" alt="">
+          </figure>
+          <p class="tit"> Level of difficulty:</p>
+
+          <mat-icon *ngFor="let i of [].constructor(recipe?.levelOfDifficulty); let index = index"
+            class="icon">star</mat-icon>
+          <p class="tit">listIngredients:</p>
+          <!-- <div>
+            <mat-icon *ngFor="let ingredient of recipe?.listIngredients; let index = index" class="icon">
+              check_circle {{ ingredient }}
+            </mat-icon>
+          </div> -->
+          <div *ngFor="let ingredient of recipe?.listIngredients; let index = index">
+            <mat-icon  class="icon">check_circle</mat-icon>
+            <ng-container >
+              {{ ingredient }}
+            </ng-container>
+          </div>
+          <p class="tit">preparation:</p>
+          <div *ngFor="let ingredient of recipe?.preparation; let index = index">
+          
+            <ng-container >
+              {{index+1}}.{{ ingredient }}
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-danger" data-dismiss="modal" (click)="deleteRecipe()" [disabled]="!this.isUser" ><mat-icon>clear</mat-icon>delete</button>
+            <button class="btn btn-danger" data-dismiss="modal" (click)="editRecipe()" [disabled]="!this.isUser" ><mat-icon>edit</mat-icon>edit</button>
+          </div>
+        </div>
+      </div>
+   
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dalog -->
+</div><!-- /.modal -->

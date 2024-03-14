@@ -1,0 +1,49 @@
+<div class="container">
+
+  <form [formGroup]="addForm" id="form">
+
+    <div class="group">
+      <input type="text" id="username" formControlName="name" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="username">Name</label>
+      <ng-container *ngIf="this.addForm.controls['name'].errors as nameError">
+        <p class="err" *ngIf="nameError['required']">this field is must!</p>
+        <p class="err" *ngIf="nameError['minlength']">this field is must at least 3 digits</p>
+      </ng-container>
+    </div>
+    <div class="group">
+      <input type="text" id="address" formControlName="address" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="address">address</label>
+      <ng-container *ngIf="this.addForm.controls['address'].errors as addressError">
+        <p class="err" *ngIf="addressError['required']">this field is must!</p>
+        <p class="err" *ngIf="addressError['minlength']">this field is must at least 3 digits</p>
+      </ng-container>
+    </div>
+    <div class="group">
+      <input type="email" id="email" formControlName="email" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="email">email</label>
+      <ng-container *ngIf="this.addForm.controls['email'].errors as emailError">
+        <p class="err" *ngIf="emailError['required']">this field is must!</p>
+        <p class="err" *ngIf="emailError['email']">It is mandatory to fill in characters in the required format - tovim
+          gmail.com</p>
+      </ng-container>
+    </div>
+    <div class="group">
+      <input type="password" id="password" formControlName="password" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="password">password</label>
+      <ng-container *ngIf="this.addForm.controls['password'].errors as passwordError">
+        <p class="err" *ngIf="passwordError['required']">this field is must!</p>
+        <p class="err" *ngIf="passwordError['minlength']">this field is must at least 5 digits</p>
+      </ng-container>
+    </div>
+    <button class="btn btn-primary" [disabled]="!this.addForm.valid" (click)="save()" id="submit">save</button>
+  </form>
+
+</div>

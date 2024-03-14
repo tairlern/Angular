@@ -1,0 +1,82 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Edit Recipe</h4>
+
+
+            <form [formGroup]="this.addForm">
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">name</span>
+                    </div>
+                    <input name="" class="form-control" formControlName="nameRecipe" type="text">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">img </span>
+                    </div>
+                    <input name="" class="form-control" formControlName="urlImage" type="text">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">category </span>
+                    </div>
+                    <input name="" class="form-control" type="text" formControlName="categoryId">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">lavel </span>
+                    </div>
+                    <input name="" class="form-control" placeholder={{recipe?.levelOfDifficulty}} type="text"
+                        formControlName="levelOfDifficulty">
+                    <ng-container *ngIf="this.addForm.controls['levelOfDifficulty'].errors as levelOfDifficultyError">
+                        <p class="err" *ngIf="levelOfDifficultyError['max']">this field is must at max 5 </p>
+                        <p class="err" *ngIf="levelOfDifficultyError['min']">this field is must at min 1 </p>
+                    </ng-container>
+                </div>
+            
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">listIngredients</span>
+                    </div>
+                    <div class="input-group">
+                        <input class="form-control" (focus)="onAddPreparation()" type="text">
+                    </div>
+                </div>
+                <div class="form-group input-group">
+                    
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">preparation</span>
+                    </div>
+                    <ng-container *ngFor="let p of recipe?.preparation" formControlName="preparation">
+                        <div class="input-group">
+                            <input class="form-control" placeholder={{p}} >
+                        </div>
+                    </ng-container>
+
+                    <button type="button" class="btn btn-primary" (click)="onAddPreparation()">+  </button>
+                </div>
+             
+               
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" id="cencel"> Cancel </button>
+                    <button type="submit" class="btn btn-primary btn-block save" > Save changes </button>
+                </div> <!-- form-group// -->
+           
+            </form>
+        </article>
+    </div> <!-- card.// -->
+
+</div>
+
