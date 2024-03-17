@@ -7,6 +7,7 @@
 
 
 <div class="container">
+    <button class="btn cencel" data-dismiss="modal" (click)="cencel()"> <mat-icon>cancel</mat-icon> </button>
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
             <h3 class="card-title mt-3 text-center h3">Add Recipe</h3>
@@ -104,8 +105,8 @@
 
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block" id="cencel"> Cancel </button>
-                    <button type="submit" class="btn btn-primary btn-block save"> Add recipe </button>
+                 
+                    <button type="submit" class="btn btn-primary btn-block save" (click)="save()"> Add recipe </button>
                 </div>
 
             </form>

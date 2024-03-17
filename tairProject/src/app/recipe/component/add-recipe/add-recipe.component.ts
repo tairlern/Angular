@@ -42,6 +42,10 @@ inputFieldsP: any = [''];
     private formBuilder: FormBuilder, 
     private router: Router) { }
   ngOnInit(): void {
+
+
+  
+
 this._UserService.getUserFromServer().subscribe({
   next:(res)=>{
     this.userList=res;
@@ -64,8 +68,8 @@ this._UserService.getUserFromServer().subscribe({
       dateAdd: [Date.now],
       levelOfDifficulty: [null||null, [Validators.required, Validators.min(1), Validators.max(5)]],
       userId: [this.user?.id],
-      // listIngredients: this.formBuilder.array(this.recipe?.listIngredients.map(ingredient => this.formBuilder.control(ingredient))),
-      // preparation: this.formBuilder.array(this.recipe?.preparation.map(step => this.formBuilder.control(step)))
+      listIngredients: this.formBuilder.array([]),
+      preparation: this.formBuilder.array([])
     });
   
   }
@@ -77,5 +81,31 @@ this._UserService.getUserFromServer().subscribe({
   }
   addEmptyInputP(index: number) {
     this.inputFieldsP.splice(index + 1, 0, ''); // Add a new empty input after the clicked input
+  }
+  save(){
+console.log(this.addForm.value);
+
+this._recipeService.addRecipe(this.addForm.value).subscribe({
+  next:(res)=>{
+    this.router.navigate(['../' + '/all-recipes'], {
+      relativeTo: this.route
+    })
+    Swal.fire({
+      icon: "success",
+      title: "The recipe was successfully added",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  },
+  error:(res)=>{
+    console.log(res)
+  }
+})
+  }
+  cencel() {
+    this.router.navigate(['../' + '/all-recipes'], {
+      relativeTo: this.route
+    })
+
   }
 }
