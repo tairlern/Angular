@@ -21,16 +21,18 @@
 }
 
 .btn-facebook {
-    background-color: #405D9D;
-    color: #fff;
+    background-color: rgb(10, 72, 10);
+    color:  rgb(10, 72, 10);
 }
 .btn-twitter {
-    background-color: #42AEEC;
-    color: #fff;
+    background-color:rgb(11, 79, 11);
+    color:  rgb(10, 72, 10);
 }
-#cencel{
+.cencel{
     background-color: red;
     border: red;
+    height: 50px;
+    width: 130px;
 }
 .icon{
   align-items: start;
@@ -39,5 +41,19 @@
     color: red;
 }
 .save{
-    background-color: rgb(18, 92, 18) !important;
+    background-color: rgb(105, 158, 105);
+    border: rgb(105, 158, 105);
+    height: 50px;
+    width: 130px;
+}
+.input-group-text{
+    background-color: rgb(105, 158, 105);
+}
+.add{
+    border:  rgb(105, 158, 105);
+    background-color: rgb(105, 158, 105);
+}
+.form-group{
+    display: flex;
+    justify-content:left;
 }

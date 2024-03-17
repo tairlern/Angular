@@ -10,9 +10,7 @@
 <div class="container">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
-            <h4 class="card-title mt-3 text-center">Edit Recipe</h4>
-
-
+            <h4 class="card-title mt-3 text-center">Add Recipe</h4>
             <form [formGroup]="this.addForm">
 
                 <div class="form-group input-group">
@@ -23,15 +21,15 @@
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">img </span>
-                    </div>
-                    <input name="" class="form-control" formControlName="urlImage" type="text">
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">category </span>
+                        <span class="input-group-text">category</span>
                     </div>
                     <input name="" class="form-control" type="text" formControlName="categoryId">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">preparation Time</span>
+                    </div>
+                    <input name="" class="form-control" type="number" formControlName="preparationTime">
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -45,6 +43,12 @@
                     </ng-container>
                 </div>
             
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">img </span>
+                    </div>
+                    <input name="" class="form-control" formControlName="urlImage" type="text">
+                </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">listIngredients</span>
@@ -66,9 +70,7 @@
                     </ng-container>
 
                     <button type="button" class="btn btn-primary" (click)="onAddPreparation()">+  </button>
-                </div>
-             
-               
+                </div>     
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block" id="cencel"> Cancel </button>
                     <button type="submit" class="btn btn-primary btn-block save" > Save changes </button>

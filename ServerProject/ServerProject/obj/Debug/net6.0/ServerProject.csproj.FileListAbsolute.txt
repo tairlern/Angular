@@ -25,3 +25,8 @@ Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט של�
 Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\ServerProject.pdb
 Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\ServerProject.genruntimeconfig.cache
 Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\ref\ServerProject.dll
+Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\staticwebassets\msbuild.ServerProject.Microsoft.AspNetCore.StaticWebAssets.props
+Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\staticwebassets\msbuild.build.ServerProject.props
+Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ServerProject.props
+Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ServerProject.props
+Y:\Groups\Group_3\ניזרי  תאיר יהודית\Angular\הפרויקט שלי\ServerProject\ServerProject\obj\Debug\net6.0\staticwebassets.pack.json

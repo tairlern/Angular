@@ -23,32 +23,32 @@ export class RecipeDetailsComponent implements OnInit {
     let idNumber!: number;
 let n !:Recipe;
     const idString = this.route.snapshot.queryParamMap.get('name');
-    console.log(idString, "param")
+    // console.log(idString, "param")
 
 
     if (idString) {
       idNumber = parseInt(idString, 10);
-      console.log(idNumber, "param")
+      // console.log(idNumber, "param")
       this._recipeService.getRecipeById(idNumber).subscribe({
         next: (res) => {
           this.recipe = res;
-          console.log(this.recipe, "recipe");
+          // console.log(this.recipe, "recipe");
       
           // move the remaining code that depends on this.recipe inside this block
           this._usrService.getUserById(this.recipe?.userId).subscribe({
             next: (usrRes) => {
-              console.log("this.recipe?.userId",this.recipe?.userId)
-              console.log(usrRes, "enter", "g");
+              // console.log("this.recipe?.userId",this.recipe?.userId)
+              // console.log(usrRes, "enter", "g");
               user = usrRes;
-              console.log(user,"user");
+              // console.log(user,"user");
       
-              console.log(this.recipe);
-              console.log(this.isUser);
-              console.log(user?.name, sessionStorage.getItem('name'), user?.password, sessionStorage.getItem('password'));
+              // console.log(this.recipe);
+              // console.log(this.isUser);
+              // console.log(user?.name, sessionStorage.getItem('name'), user?.password, sessionStorage.getItem('password'));
       
               if (user?.name == sessionStorage.getItem('name') && user?.password == sessionStorage.getItem('password')) {
                 this.isUser = true;
-                console.log(this.isUser,"ressssult");
+                // console.log(this.isUser,"ressssult");
               }
             },
             error: (err) => {
@@ -57,13 +57,13 @@ let n !:Recipe;
           });
           this._CategoryService.getCategoryById(this.recipe?.categoryId).subscribe({
             next:(res)=>{
-              console.log("res category",res)
+              // console.log("res category",res)
               this.category=res;
             }
           })
         },
         error: (err) => {
-          console.log(err);
+          // console.log(err);
         }
       });
      
@@ -78,7 +78,7 @@ let n !:Recipe;
   deleteRecipe(): void {
     this._recipeService.deleteById(this.recipe.id).subscribe({
       next: (res) => {
-        console.log("Recipe deleted successfully");
+        // console.log("Recipe deleted successfully");
         this.recipeDeleted.emit(); // Notify parent component
         this.router.navigate(['../' + '/all-recipes'], {
           relativeTo: this.route

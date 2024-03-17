@@ -39,44 +39,33 @@
                     <input name="" class="form-control" type="number" formControlName="preparationTime">
                     
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">lavel </span>
-                    </div>
-                    <input name="" class="form-control" placeholder="{{recipe?.levelOfDifficulty}}" type="text"
-                        formControlName="levelOfDifficulty">
-                    <ng-container *ngIf="this.addForm.controls['levelOfDifficulty'].errors as levelOfDifficultyError">
-                        <p class="err" *ngIf="levelOfDifficultyError['max']">this field is must at max 5 </p>
-                        <p class="err" *ngIf="levelOfDifficultyError['min']">this field is must at min 1 </p>
-                    </ng-container>
-                </div>
-            
-                <div class="form-group input-group" formArrayName="listIngredients">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">listIngredients</span>
-                    </div>
-                    <ng-container *ngFor="let control of listIngredients.controls; let i = index;">
-                        <div class="input-group">
-                            <input class="form-control" [formControlName]="i" >
-                        </div>
-                    </ng-container>
-                    <button type="button" class="btn btn-primary" (click)="onAddIngredient()">Add Ingredient</button>
-                </div>
-                
-                <div class="form-group input-group" formArrayName="preparation">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">preparation</span>
-                    </div>
-                    <ng-container *ngFor="let control of preparationArray.controls; let i = index;">
-                        <div class="input-group">
-                            <input class="form-control" [formControlName]="i" [value]="control.value">
-                        </div>
-                    </ng-container>
-                    <button type="button" class="btn btn-primary" (click)="onAddpreparation()">Add Preparation</button>
-                </div>
+               <!-- List of Ingredients -->
+<div formArrayName="listIngredients">
+    <span class="input-group-text">listIngredients </span>
+    <div *ngFor="let control of listIngredients.controls; let i = index">
+      <input class="form-control" [formControlName]="i" placeholder="Ingredient {{ i + 1 }}">
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary add" (click)="onAddIngredient()">+</button>
+  
+  
+    
+  <div formArrayName="preparation">
+    <!-- <div class="input-group-prepend"> -->
+        <span class="input-group-text">Preparation </span>
+    <div *ngFor="let control of preparationArray.controls; let i = index">
+      <input class="form-control" [formControlName]="i" placeholder="Step {{ i + 1 }}">
+     
+    </div>
+  </div>
+    <!-- </div> -->
+
+  <button type="button" class="btn btn-primary add" (click)="onAddPreparation()">+</button>
+                  
+                 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block" id="cencel" (click)="cencel()"> Cancel </button>
-                    <button type="submit" class="btn btn-primary btn-block save" (click)="Save()"> Save changes </button>
+                    <button type="submit" class="btn btn-primary btn-block cencel"  (click)="cancel()"> Cancel </button>
+                    <button type="submit" class="btn btn-primary btn-block save" (click)="save()"> Save changes </button>
                 </div>
            
             </form>

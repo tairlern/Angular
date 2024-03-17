@@ -2,6 +2,8 @@ import { ActivatedRoute, CanActivateFn, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 export const recipGuard: CanActivateFn = (route, state) => {
+  console.log("guard");
+  console.log(sessionStorage.getItem('name'))
   const router = new Router(); 
   const activatedRoute=new ActivatedRoute();
   if (sessionStorage.getItem('name') != null&&sessionStorage.getItem('password')!=null) {
