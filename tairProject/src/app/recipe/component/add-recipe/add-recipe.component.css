@@ -41,3 +41,11 @@
 .save{
     background-color: rgb(18, 92, 18) !important;
 }
+.h3{
+    font-size: 50px;
+    color: rgb(1, 71, 1);
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+}

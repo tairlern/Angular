@@ -1,16 +1,15 @@
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <!------ Include the above in your HEAD tag ---------->
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
 
 
 <div class="container">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
-            <h4 class="card-title mt-3 text-center">Add Recipe</h4>
+            <h3 class="card-title mt-3 text-center h3">Add Recipe</h3>
             <form [formGroup]="this.addForm">
 
                 <div class="form-group input-group">
@@ -21,9 +20,11 @@
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">category</span>
+                        <span class="input-group-text">Category</span>
                     </div>
-                    <input name="" class="form-control" type="text" formControlName="categoryId">
+                    <select  class="form-control" formControlName="categoryId">
+                        <option *ngFor="let control of categoryArry; let i = index" [value]="control.id">{{control.name}}</option>
+                    </select>
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -33,52 +34,82 @@
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">lavel </span>
+                        <span class="input-group-text">Level of Difficulty</span>
                     </div>
-                    <input name="" class="form-control" placeholder={{recipe?.levelOfDifficulty}} type="text"
-                        formControlName="levelOfDifficulty">
-                    <ng-container *ngIf="this.addForm.controls['levelOfDifficulty'].errors as levelOfDifficultyError">
-                        <p class="err" *ngIf="levelOfDifficultyError['max']">this field is must at max 5 </p>
-                        <p class="err" *ngIf="levelOfDifficultyError['min']">this field is must at min 1 </p>
-                    </ng-container>
+                    <select class="form-control" formControlName="levelOfDifficulty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <!-- <ng-container *ngIf="addForm.get('levelOfDifficulty').invalid && (addForm.get('levelOfDifficulty').dirty || addForm.get('levelOfDifficulty').touched)">
+                        <div *ngIf="addForm.get('levelOfDifficulty').errors?.required">Level of Difficulty is required</div>
+                        <div *ngIf="addForm.get('levelOfDifficulty').errors?.min || addForm.get('levelOfDifficulty').errors?.max">
+                          Level of Difficulty must be between 1 and 5
+                        </div>
+                      </ng-container> -->
                 </div>
-            
+
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">img </span>
                     </div>
                     <input name="" class="form-control" formControlName="urlImage" type="text">
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">listIngredients</span>
-                    </div>
-                    <div class="input-group">
-                        <input class="form-control" (focus)="onAddPreparation()" type="text">
-                    </div>
                 </div>
                 <div class="form-group input-group">
-                    
-
                     <div class="input-group-prepend">
-                        <span class="input-group-text">preparation</span>
+                        <span class="input-group-text">listIngredients </span>
                     </div>
-                    <ng-container *ngFor="let p of recipe?.preparation" formControlName="preparation">
-                        <div class="input-group">
-                            <input class="form-control" placeholder={{p}} >
-                        </div>
-                    </ng-container>
+                    <div class="container input-container">
+                        <input *ngFor="let input of inputFields; let i = index" type="text" (click)="addEmptyInput(i)">
+                    </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        function addEmptyInput() {
+                            const container = document.querySelector('.container');
+                            const input = document.createElement('input');
+                            input.setAttribute('type', 'text');
+                            container.appendChild(input);
+                        }
 
-                    <button type="button" class="btn btn-primary" (click)="onAddPreparation()">+  </button>
-                </div>     
+                        const inputRef = document.querySelector('#inputRef');
+                        inputRef.onclick = addEmptyInput;
+                    });
+                </script>
+
+                </div>
+                
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">preparation </span>
+                    </div>
+                    <div class="container input-container">
+                        <input *ngFor="let input of inputFieldsP; let i = index" type="text" (click)="addEmptyInputP(i)">
+                    </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        function addEmptyInput() {
+                            const container = document.querySelector('.container');
+                            const input = document.createElement('input');
+                            input.setAttribute('type', 'text');
+                            container.appendChild(input);
+                        }
+
+                        const inputRef = document.querySelector('#inputRef');
+                        inputRef.onclick = addEmptyInput;
+                    });
+                </script>
+
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block" id="cencel"> Cancel </button>
-                    <button type="submit" class="btn btn-primary btn-block save" > Save changes </button>
-                </div> <!-- form-group// -->
-           
+                    <button type="submit" class="btn btn-primary btn-block save"> Add recipe </button>
+                </div>
+
             </form>
         </article>
-    </div> <!-- card.// -->
+    </div>
 
 </div>
-

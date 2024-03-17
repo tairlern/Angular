@@ -53,7 +53,12 @@
     border:  rgb(105, 158, 105);
     background-color: rgb(105, 158, 105);
 }
-.form-group{
+#buttons{
     display: flex;
     justify-content:left;
+    right: 10px; 
+}
+.h3{
+    font-size: 50px;
+    color: rgb(1, 71, 1);
 }

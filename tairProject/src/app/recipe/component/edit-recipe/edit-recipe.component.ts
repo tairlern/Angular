@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from '../../recipe.service';
 import { Recipe } from '../../../models/recipe.model';
-import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-recipe',
@@ -11,7 +11,18 @@ import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@ang
 })
 export class EditRecipeComponent implements OnInit {
   public recipe!: Recipe;
-  public addForm!: FormGroup;
+  public addForm: FormGroup = this.formBuilder.group({
+    id: [''],
+    categoryId: [''],
+    preparationTime: [''],
+    nameRecipe: [''],
+    urlImage: [''],
+    dateAdd: [''],
+    levelOfDifficulty: [''],
+    userId: [''],
+    listIngredients: this.formBuilder.array([]),
+    preparation: this.formBuilder.array([])
+  });
 
   constructor(private route: ActivatedRoute, private _recipeService: RecipeService, private formBuilder: FormBuilder, private router: Router) { }
 
@@ -23,20 +34,17 @@ export class EditRecipeComponent implements OnInit {
         next: (res) => {
           this.recipe = res;
           this.addForm = this.formBuilder.group({
-            id: [this.recipe.id],
-            categoryId: [this.recipe.categoryId || ''],
-            preparationTime: [this.recipe.preparationTime || ''],
-            nameRecipe: [this.recipe.nameRecipe || ''],
-            urlImage: [this.recipe.urlImage || ''],
-            dateAdd: [this.recipe.dateAdd || ''],
-            levelOfDifficulty: [this.recipe.levelOfDifficulty || ''],
-            userId: [this.recipe.userId],
-            listIngredients: this.formBuilder.array(this.recipe.listIngredients.map(ingredient => this.formBuilder.control(ingredient))),
-            preparation: this.formBuilder.array(this.recipe.preparation.map(step => this.formBuilder.control(step)))
+            id: [this.recipe?.id],
+            categoryId: [this.recipe?.categoryId || ''],
+            preparationTime: [this.recipe?.preparationTime || ''],
+            nameRecipe: [this.recipe?.nameRecipe || ''],
+            urlImage: [this.recipe?.urlImage || ''],
+            dateAdd: [this.recipe?.dateAdd || ''],
+            levelOfDifficulty: [this.recipe?.levelOfDifficulty || ''],
+            userId: [this.recipe?.userId],
+            listIngredients: this.formBuilder.array(this.recipe?.listIngredients.map(ingredient => this.formBuilder.control(ingredient))),
+            preparation: this.formBuilder.array(this.recipe?.preparation.map(step => this.formBuilder.control(step)))
           });
-          console.log("addForm: ", this.addForm);
-          console.log("listIngredients values: ", this.addForm.get('listIngredients')?.value);
-          console.log("preparation values: ", this.addForm.get('preparation')?.value);
         },
         error:(res)=>
         {
@@ -67,6 +75,7 @@ export class EditRecipeComponent implements OnInit {
   }
 
   save() {
+    console.log("post addfrom",this.addForm?.value)
     this._recipeService.putRepcip(this.recipe.id, this.addForm.value).subscribe({
       next: (res) => {
         console.log("Successfully updated recipe");
