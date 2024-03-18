@@ -44,12 +44,6 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <!-- <ng-container *ngIf="addForm.get('levelOfDifficulty').invalid && (addForm.get('levelOfDifficulty').dirty || addForm.get('levelOfDifficulty').touched)">
-                        <div *ngIf="addForm.get('levelOfDifficulty').errors?.required">Level of Difficulty is required</div>
-                        <div *ngIf="addForm.get('levelOfDifficulty').errors?.min || addForm.get('levelOfDifficulty').errors?.max">
-                          Level of Difficulty must be between 1 and 5
-                        </div>
-                      </ng-container> -->
                 </div>
 
                 <div class="form-group input-group">
@@ -58,12 +52,13 @@
                     </div>
                     <input name="" class="form-control" formControlName="urlImage" type="text">
                 </div>
+
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">listIngredients </span>
                     </div>
                     <div class="container input-container">
-                        <input *ngFor="let input of inputFields; let i = index" type="text" (click)="addEmptyInput(i)">
+                        <input *ngFor="let input of inputFields; let i = index" type="text" (click)="addEmptyInput(i)" >
                     </div>
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {

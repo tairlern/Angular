@@ -10,8 +10,10 @@ import { SmallRecipeComponent } from './component/small-recipe/small-recipe.comp
 import { TimePipe } from "./time.pipe";
 import { MatIconModule } from '@angular/material/icon';
 import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.component';
-
-
+// import {MatRadioModule} from '@angular/material/radio';
+// import {MatInputModule} from '@angular/material/input';
+// import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
     declarations: [
         SmallRecipeComponent, AllRecipesComponent, AddRecipeComponent, RecipeDetailsComponent,EditRecipeComponent
@@ -19,7 +21,7 @@ import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.compone
     exports: [RecipeRoutingModule],
     imports: [
         CommonModule, ReactiveFormsModule, RecipeRoutingModule, HttpClientModule, FormsModule,
-        TimePipe,MatIconModule
+        TimePipe,MatIconModule,MatFormFieldModule
        
     ]
 })

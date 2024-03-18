@@ -49,7 +49,7 @@ inputFieldsP: any = [''];
 this._UserService.getUserFromServer().subscribe({
   next:(res)=>{
     this.userList=res;
-    this.user!=this.userList.find(u=>u.name==sessionStorage.getItem('name')&&u.password==sessionStorage.getItem('password'))||null;
+    this.user!=this.userList.find(u=>u.name==sessionStorage.getItem('name')&&u.password==sessionStorage.getItem('password'));
     this._CategoryService.getCategoryFromServer().subscribe({
       next:(res)=>{
         this.categoryArry=res;
@@ -58,7 +58,8 @@ this._UserService.getUserFromServer().subscribe({
         console.log(res);
       }
     })
-   
+   console.log("user",this.user)
+   console.log("inputFieldsP",this.inputFieldsP)
     this.addForm = this.formBuilder.group({
       id: [this.idn+1],
       categoryId: [ ''||null,[Validators.required]],
@@ -68,8 +69,8 @@ this._UserService.getUserFromServer().subscribe({
       dateAdd: [Date.now],
       levelOfDifficulty: [null||null, [Validators.required, Validators.min(1), Validators.max(5)]],
       userId: [this.user?.id],
-      listIngredients: this.formBuilder.array([]),
-      preparation: this.formBuilder.array([])
+      listIngredients: this.formBuilder?.array([]),
+      preparation: this.formBuilder?.array([])
     });
   
   }
@@ -84,7 +85,6 @@ this._UserService.getUserFromServer().subscribe({
   }
   save(){
 console.log(this.addForm.value);
-
 this._recipeService.addRecipe(this.addForm.value).subscribe({
   next:(res)=>{
     this.router.navigate(['../' + '/all-recipes'], {
