@@ -1,7 +1,28 @@
 .color{
     
-    color: green;
+    color: green;  
+    text-decoration: none;
+   border-radius: 0.3em 0.3em 0.3em 0.3em;
+    font-size: 20px;
+    margin-right:1vw
 }
+
 #title{
     text-align: center;
+    font-size:60px;
+padding-top: 15px;
 }
+.nav-tabs{
+ display: flex;
+ flex-direction: row;
+ justify-content:space-around;
+ width: 50%;
+ margin-top: 2vw;
+}
+.color:hover{
+    color: white;
+    background-color: green;
+}
+   
+   
+

@@ -26,4 +26,4 @@ const RECIPE_ROUTES: Route[] = [
 })
 export class RecipeRoutingModule { }
 
-/**canActivate: [recipGuard] */
+// /**canActivate: [recipGuard] */

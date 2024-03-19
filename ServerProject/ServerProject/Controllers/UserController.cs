@@ -9,6 +9,7 @@ namespace ServerProject.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        static int count = 5;
         public static List<User> users = new List<User>()
         {
             new User(){  Id = 1,Name="Moshe",Address="bnybrak",Email="123@gmail.com",Password="m1234" },
@@ -35,8 +36,9 @@ namespace ServerProject.Controllers
         [HttpPost]
         public void Post([FromBody] User value)
         {
-            if(value != null)
-                users.Add(value);
+            if (value != null)
+               {   value.Id = count++;
+           users.Add(value); }
         }
 
         // PUT api/<UserController>/5

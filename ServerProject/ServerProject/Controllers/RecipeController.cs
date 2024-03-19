@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ServerProject.Edentities;
+using System.Drawing;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -9,19 +10,20 @@ namespace ServerProject.Controllers
     [ApiController]
     public class RecipeController : ControllerBase
     {
+        static int count = 5;
         public static List<Recipe> recipes=new List<Recipe>()
         {
               new Recipe {
         Id = 0,
-        NameRecipe = "Chocolate Cake",
-        CategoryId = 1,
+        NameRecipe = "Chocolate Cookieד",
+        CategoryId = 2,
         PreparationTime = 45,
         LevelOfDifficulty = 5,
         DateAdd = DateTime.Now,
         ListIngredients = new List<string> { "Flour", "Sugar", "Cocoa Powder", "Eggs", "Milk" },
         Preparation = new List<string> { "Preheat oven to 350°F", "Mix dry ingredients", "Add wet ingredients", "Bake for 30 minutes" },
         UserId = 2,
-        UrlImage = "../../../../assets/c4.jpg"
+        UrlImage = "t../../../../assets/c7.jpg"
       },
       new Recipe
       {
@@ -34,32 +36,32 @@ namespace ServerProject.Controllers
         ListIngredients = new List<string> { "Flour", "Sugar", "Cocoa Powder", "Eggs", "Milk" },
         Preparation = new List<string> { "Preheat oven to 350°F", "Mix dry ingredients", "Add wet ingredients", "Bake for 30 minutes" },
         UserId = 1,
-        UrlImage = "../../../../assets/c3.jpg"
+        UrlImage = "../../../../assets/c1.jpg"
       },
       new Recipe {
         Id = 1,
-        NameRecipe = "Chocolate Cake",
-        CategoryId = 1,
+        NameRecipe = "beard",
+        CategoryId =4,
         PreparationTime = 45,
         LevelOfDifficulty = 1,
         DateAdd = DateTime.Now,
         ListIngredients = new List<string> { "Flour", "Sugar", "Cocoa Powder", "Eggs", "Milk" },
         Preparation = new List<string> { "Preheat oven to 350°F", "Mix dry ingredients", "Add wet ingredients", "Bake for 30 minutes" },
         UserId = 1,
-        UrlImage = "../../../../assets/c2.jpg"
+        UrlImage = "../../../../assets/bread20.jpg"
 
       },
       new Recipe {
         Id = 3,
-        NameRecipe = "Vegetable Stir-Fry",
-        CategoryId = 2,
+        NameRecipe = "Orange cake",
+        CategoryId = 1,
         PreparationTime = 30,
         LevelOfDifficulty = 5,
         DateAdd = DateTime.Now,
-        ListIngredients = new List<string> { "Broccoli", "Carrots", "Bell Peppers", "Onions", "Garlic", "Soy Sauce" },
-        Preparation = new List<string> { "Chop vegetables", "Stir-fry in hot oil", "Add sauce", "Cook until tender" },
+        ListIngredients = new List<string> { "Flour", "Sugar", "Cocoa Powder", "Eggs", "Milk","Orange jump"},
+        Preparation = new List<string> { "Separate eggs","whip" ,"add other ingredients" , "put in the oven"},
         UserId = 2,
-        UrlImage = "../../../../assets/c1.jpg"
+        UrlImage = "../../../../assets/bread9.jpg"
       }
         };
         // GET: api/<RecipeController>
@@ -81,7 +83,11 @@ namespace ServerProject.Controllers
         [HttpPost]
         public void Post([FromBody] Recipe value)
         {
-            recipes.Add(value);
+            if(value != null) {
+                value.Id = count++;
+                recipes.Add(value);
+            }
+         
         }
 
         // PUT api/<RecipeController>/5

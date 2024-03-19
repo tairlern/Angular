@@ -1,5 +1,5 @@
 
-<div  class="center"><button (click)="openModal()" class="search">Search</button></div>
+<button (click)="openModal()" class="search">Search</button>
 <div *ngIf="showElement"   >
     
               
@@ -20,10 +20,10 @@
         <option *ngFor="let control of listRecipetime; let i = index" [value]="control">{{control}}</option>
     </select>
     
-    <button type="submit" class="btn btn-default" (click)="submit()">Submit</button>
+    <button type="submit" class="btn" (click)="submit()">Submit</button>
 </div>
 </form>  
 </div>
 
-      
-<app-small-recipe  *ngFor="let r of listRecipe" [selectedRecipe]="r" class="rowRecipe" ></app-small-recipe>
+     <div class="list">
+<app-small-recipe  *ngFor="let r of listRecipe" [selectedRecipe]="r" class="rowRecipe" ></app-small-recipe></div> 

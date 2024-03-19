@@ -9,13 +9,14 @@ namespace ServerProject.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        static int count = 5;
         public static List<Category> categories = new List<Category>()
         {
              
-            new Category(){Id=1,Name="pastries",UrlImage="../../../../assets/bread20.jpg"},
-            new Category(){Id=2,Name="soups",UrlImage="../../../../assets/bread20.jpg"},
-            new Category(){Id=3,Name="desserts",UrlImage="../../../../assets/bread20.jpg"},
-            new Category(){Id=4,Name="breads",UrlImage="../../../../assets/bread20.jpg"},
+            new Category(){Id=1,Name="pastries",UrlImage="../../../../assets/fork.png"},
+            new Category(){Id=2,Name="soups",UrlImage="../../../../assets/serving-dish.png"},
+            new Category(){Id=3,Name="desserts",UrlImage="../../../../assets/ice-cream.png"},
+            new Category(){Id=4,Name="breads",UrlImage="../../../../assets/breads.png"},
         };
         // GET: api/<CategoryController>
         [HttpGet]
@@ -36,8 +37,11 @@ namespace ServerProject.Controllers
         [HttpPost]
         public void Post([FromBody] Category value)
         {
-            if(value!=null)
-                categories.Add(value);  
+            if (value != null)
+            { 
+                value.Id= count++;
+                categories.Add(value);
+            }
         }
 
         // PUT api/<CategoryController>/5
@@ -45,7 +49,7 @@ namespace ServerProject.Controllers
         public void Put(int id, [FromBody] Category value)
         {
             categories.Find(x => x.Id == id).Name = value.Name;
-           // categories.Find(x => x.Id == id).UrlImage = value.UrlImage;
+           categories.Find(x => x.Id == id).UrlImage = value.UrlImage;
         }
 
         // DELETE api/<CategoryController>/5

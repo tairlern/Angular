@@ -1,9 +1,4 @@
-<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!------ Include the above in your HEAD tag ---------->
 
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
 <div class="container">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
@@ -16,26 +11,47 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">name</span>
                     </div>
-                    <input name="" class="form-control" formControlName="nameRecipe" type="text">
+                    <input name="" class="form-control" formControlName="nameRecipe" type="text" required>
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['nameRecipe'].errors as nameRecipeError">
+                          <p class="err" *ngIf="nameRecipeError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">img </span>
                     </div>
-                    <input name="" class="form-control" formControlName="urlImage" type="text">
-                </div> <!-- form-group// -->
+                    <input name="" class="form-control" formControlName="urlImage" type="text" required>
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['urlImage'].errors as urlImageError">
+                          <p class="err" *ngIf="urlImageError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
+
+
+                </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">category </span>
                     </div>
-                    <input name="" class="form-control" type="text" formControlName="categoryId">
+                    <input name="" class="form-control" type="text" formControlName="categoryId" required>
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['categoryId'].errors as categoryIdError">
+                          <p class="err" *ngIf="categoryIdError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">time </span>
                     </div>
-                    <input name="" class="form-control" type="number" formControlName="preparationTime">
-                    
+                    <input name="" class="form-control" type="number" formControlName="preparationTime" required>
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['preparationTime'].errors as preparationTimeError">
+                          <p class="err" *ngIf="preparationTimeError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
                 </div>
                <!-- List of Ingredients -->
 <div formArrayName="listIngredients">
@@ -43,6 +59,7 @@
     <div *ngFor="let control of listIngredients.controls; let i = index">
       <input class="form-control" [formControlName]="i" placeholder="Ingredient {{ i + 1 }}">
     </div>
+    
   </div>
   <button type="button" class="btn btn-primary add" (click)="onAddIngredient()">+</button>
   
@@ -63,7 +80,7 @@
                  
                 <div class="form-group" id="buttons">
                     <button type="submit" class="btn btn-primary btn-block cencel"  (click)="cancel()"> Cancel </button>
-                    <button type="submit" class="btn btn-primary btn-block save" (click)="save()"> Save changes </button>
+                    <button type="submit" class="btn btn-primary btn-block save" (click)="save()" [disabled]="!this.addForm.valid"> Save changes </button>
                 </div>
            
             </form>

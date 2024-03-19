@@ -1,12 +1,12 @@
 .search{
-    text-align:start ;
-    background-color: rgb(3, 53, 3);
-    color: white;
-    justify-content: center;
-    border:  rgb(6, 88, 6);
-    align-items: center;
+    /* background-color: rgb(3, 53, 3); */
+    color:  #033503;
+    border-color:  rgb(3, 53, 3);
     width: 60px;
     height:30px;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
 
 }
 .form-control{
@@ -27,11 +27,19 @@ width:150px;
   flex-wrap: wrap;
 }
 .btn{
-  margin-top: 10px;
+
   border-color: rgb(3, 53, 3);
   color:rgb(3, 53, 3) ;
+ 
+
 }
 .btn:hover{
   background-color:rgb(3, 53, 3) ;
   color:white;
+}
+.list{
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
 }

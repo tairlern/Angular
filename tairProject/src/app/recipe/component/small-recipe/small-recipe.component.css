@@ -17,6 +17,7 @@ h5 {
   border: none;
   border-radius: .28571429rem;
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  width:250px;
 }
 
 .card-block {
@@ -79,7 +80,7 @@ h5 {
 .profile-avatar {
   display: block;
   width: 100%;
-  height: 100%;
+  height:100%;
   border-radius: 50%;
 }
 
@@ -122,4 +123,7 @@ h5 {
 }
 .icon{
   font-size: 20px;
+}
+.imgbig{
+  height: 150px;
 }

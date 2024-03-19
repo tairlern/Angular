@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
             relativeTo: this.route,
           })
          
-          console.log(res);
+          console.log( this.addForm.value,"השמירה");
         },
         error: (err) => {
           console.log(err);

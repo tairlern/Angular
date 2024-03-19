@@ -18,6 +18,11 @@
                         <span class="input-group-text">name</span>
                     </div>
                     <input name="" class="form-control" formControlName="nameRecipe" type="text">
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['nameRecipe'].errors as nameRecipeError">
+                          <p class="err" *ngIf="nameRecipeError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -32,6 +37,11 @@
                         <span class="input-group-text">preparation Time</span>
                     </div>
                     <input name="" class="form-control" type="number" formControlName="preparationTime">
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['preparationTime'].errors as preparationTimeError">
+                          <p class="err" *ngIf="preparationTimeError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -51,6 +61,11 @@
                         <span class="input-group-text">img </span>
                     </div>
                     <input name="" class="form-control" formControlName="urlImage" type="text">
+                    <div>
+                        <ng-container *ngIf="this.addForm.controls['urlImage'].errors as urlImageError">
+                          <p class="err" *ngIf="urlImageError['required']">*this field is must!</p>
+                        </ng-container>
+                    </div>
                 </div>
 
                 <div class="form-group input-group">
@@ -59,6 +74,11 @@
                     </div>
                     <div class="container input-container">
                         <input *ngFor="let input of inputFields; let i = index" type="text" (click)="addEmptyInput(i)" >
+                        <!-- <div>
+                            <ng-container *ngIf="this.addForm.controls['nameRecipe'].errors as nameRecipeError">
+                              <p class="err" *ngIf="nameRecipeError['required']">*this field is must!</p>
+                            </ng-container>
+                        </div> -->
                     </div>
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
@@ -101,7 +121,7 @@
                 </div>
                 <div class="form-group">
                  
-                    <button type="submit" class="btn btn-primary btn-block save" (click)="save()"> Add recipe </button>
+                    <button type="submit" class="btn btn-primary btn-block save" (click)="save()" [disabled]="!this.addForm.valid"> Add recipe </button>
                 </div>
 
             </form>
