@@ -4,23 +4,23 @@
     
               
       <form [formGroup]="this.selectForm"  class="searchbox">    
-  <div *ngIf="showElement"  aria-hidden="true" >
-    <select class="form-control" formControlName="categoryId" >
+  <div *ngIf="showElement"  aria-hidden="true"  class="selectb" >
+    <select class="form-control" formControlName="categoryId" class="select" >
       <option disabled selected value="">categoryId</option>
         <option *ngFor="let control of listCategory; let i = index" [value]="control.id">{{control.name}}</option>
     </select>
 
-    <select class="form-control" formControlName="nameRecipe" >
+    <select class="form-control" formControlName="nameRecipe" class="select">
       <option disabled selected value="">name Recipe</option>
         <option *ngFor="let control of listRecipeName; let i = index" [value]="control">{{control}}</option>
     </select>
 
-    <select class="form-control" formControlName="preparationTime" >
+    <select class="form-control" formControlName="preparationTime" class="select">
       <option disabled selected value="">preparation Time</option>
         <option *ngFor="let control of listRecipetime; let i = index" [value]="control">{{control}}</option>
     </select>
     
-    <button type="submit" class="btn" (click)="submit()">Submit</button>
+    <button type="submit" class="btn" (click)="submit()" >Submit</button>
 </div>
 </form>  
 </div>

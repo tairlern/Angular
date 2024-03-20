@@ -12,16 +12,17 @@
 .form-control{
 width:150px;
 }
-.searchbox {
+.select {
+  margin-left: 2vw;
+  height: 40px;
+  width: 90px;
+}
+.selectb{
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
+  margin-top: 2vw;
 }
 
-.searchbox select {
-  width: 150px; /* Set a specific width for the select elements */
-  margin-right: 10px;
-}
 .rowRecipe{
   display: flex;
   flex-wrap: wrap;
@@ -30,8 +31,9 @@ width:150px;
 
   border-color: rgb(3, 53, 3);
   color:rgb(3, 53, 3) ;
- 
-
+  margin-left: 2vw;
+  height: 30px;
+  width: 80px;
 }
 .btn:hover{
   background-color:rgb(3, 53, 3) ;
@@ -42,4 +44,5 @@ width:150px;
   display: flex;
   flex-direction: row;
   justify-content:space-around;
+  flex-wrap: wrap;
 }

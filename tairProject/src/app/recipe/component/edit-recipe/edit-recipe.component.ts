@@ -84,10 +84,11 @@ export class EditRecipeComponent implements OnInit {
     });
   }
 
-  updateIngredient(index: number, value: string) {
-    const control = this.listIngredients.at(index) as FormControl;
+  updateIngredient(arrayName: string, index: number, value: string) {
+    const controlArray = this.addForm.get(arrayName) as FormArray;
+    const control = controlArray.at(index) as FormControl;
     if (control) {
-      control.patchValue(value);
+      control.setValue(value);
     }
   }
 
